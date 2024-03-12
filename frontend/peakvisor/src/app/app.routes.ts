@@ -1,43 +1,59 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { LoginpageComponent } from './pages/loginpage/loginpage.component';
-import { SignuppageComponent } from './pages/signuppage/signuppage.component';
-import { AlltrailspageComponent } from './pages/alltrailspage/alltrailspage.component';
-import { Error404pageComponent } from './pages/error404page/error404page.component';
-import { OnboardingpageComponent } from './pages/onboardingpage/onboardingpage.component';
-import { SettingspageComponent } from './pages/settingspage/settingspage.component';
+import { HomePage } from './home/feature/home.page';
+import { LoginPage } from './login/feature/login.page';
+import { SignupPage } from './signup/feature/signup.page';
+import { TrailsPage } from './trails/feature/trails.page';
+import { Error404Page } from './error404/feature/error404.page';
+import { OnboardingPage } from './onboarding/feature/onboarding.page';
+import { SettingsPage } from './settings/feature/settings.page';
+import { EventspageComponent } from './eventspage/feature/eventspage.component';
+import { ProfilepageComponent } from './profile/features/profilepage/profilepage.component';
 
-export const routes: Routes = [
+export const AppRoutes: Routes = [
     {
-        path:'',
-        component:HomepageComponent,
+        path: '',
+        component: HomePage,
         data: { animation: 'nextPage' }
     },
     {
-        path:'alltrails',
-        component:AlltrailspageComponent,
+        path: 'trails',
+        component: TrailsPage,
         data: { animation: 'nextPage' }
     },
     {
-        path:'login',
-        component:LoginpageComponent,
+        path: 'login',
+        component: LoginPage,
         data: { animation: 'nextPage' }
     },
     {
-        path:'signup',
-        component:SignuppageComponent,
+        path: 'signup',
+        component: SignupPage,
         data: { animation: 'nextPage' }
     },
     {
-        path:'onboarding',
-        component:OnboardingpageComponent,
+        path: 'onboarding',
+        component: OnboardingPage,
         data: { animation: 'nextPage' }
     },
     {
-        path:'settings',
-        component:SettingspageComponent,
+        path: 'settings',
+        component: SettingsPage,
         data: { animation: 'nextPage' }
     },
-    { path: '**', component: Error404pageComponent, data: { animation: 'nextPage' }}
+    {
+        path: 'events',
+        component: EventspageComponent,
+        data: { animation: 'nextPage' }
+    },
+    {
+        path: 'profile',
+        component: ProfilepageComponent,
+        data: { animation: 'nextPage' }
+    },
+    { 
+        path: '**', 
+        component: Error404Page, 
+        data: { animation: 'nextPage' }
+    }
 ];

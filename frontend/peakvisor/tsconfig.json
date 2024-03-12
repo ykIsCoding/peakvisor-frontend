@@ -2,6 +2,25 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@environments/*": ["src/environments/*"],
+      "@styles/*": ["src/styles/*"],
+      
+      "error404": ["src/app/error404/*"],
+      "@home": ["src/app/home/*"],
+      "@login": ["src/app/login/*"],
+      "@onboarding": ["src/app/onboarding/*"],
+      "@settings": ["src/app/settings/*"],
+      "@shared": ["src/app/shared/*"],
+      "@signup": ["src/app/signup/*"],
+      "@trails": ["src/app/trails/*"],
+
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
